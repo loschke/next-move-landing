@@ -3,11 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Brand Colors */
+  --primary: #fa4a37; /* Combined color */
+  --queonext: #fa186b; /* queonext brand color */
+  --moveelevator: #F97901; /* Move:Elevator brand color */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-queonext: var(--queonext);
+  --color-moveelevator: var(--moveelevator);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +31,17 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom gradient classes */
+.gradient-brand {
+  background: linear-gradient(135deg, var(--queonext), var(--moveelevator));
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, var(--queonext), var(--moveelevator));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
