@@ -11,11 +11,6 @@ export default function Benefits() {
       description: "Wiederkehrende Aufgaben automatisieren und Zeit für strategische Themen gewinnen."
     },
     {
-      icon: FaBolt,
-      title: "Schneller und präziser arbeiten",
-      description: "KI kann Inhalte, Analysen und Entscheidungen verbessern."
-    },
-    {
       icon: FaUserFriends,
       title: "Einstieg ohne Hürden",
       description: "Du brauchst kein Vorwissen – wir holen Dein Team genau da ab, wo es steht."
@@ -48,7 +43,7 @@ export default function Benefits() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Dein Nutzen: KI verstehen, einsetzen und produktiv nutzen
+            KI verstehen, einsetzen und produktiv nutzen
           </h2>
           
           <motion.div 
@@ -66,11 +61,11 @@ export default function Benefits() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Mit NEXT MOVE AI bekommst Du eine strukturiert begleitete Einführung in die KI-Transformation – mit einem klaren Fahrplan, praxiserprobten Methoden und direkt anwendbaren Lösungen.
+            Mit NEXT MOVE AI bekommst Du eine strukturiert begleitete Einführung in die KI-Transformation – mit einem klaren Fahrplan, praxiserprobten Methoden und Lösungen.
           </motion.p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div 
               key={index}
