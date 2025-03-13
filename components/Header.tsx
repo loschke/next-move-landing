@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,13 +35,18 @@ export default function Header() {
           <span className="text-gradient-brand">NEXT MOVE AI</span>
         </Link>
         
-        {/* CTA Button */}
-        <Link 
-          href="#contact" 
-          className="px-4 sm:px-6 py-2 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-lg text-sm sm:text-base"
-        >
-          Kontakt
-        </Link>
+        <div className="flex items-center gap-4">
+          {/* Theme Toggle */}
+          <ThemeToggle />
+          
+          {/* CTA Button */}
+          <Link 
+            href="#contact" 
+            className="px-4 sm:px-6 py-2 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-lg text-sm sm:text-base"
+          >
+            Kontakt
+          </Link>
+        </div>
       </div>
     </header>
   );

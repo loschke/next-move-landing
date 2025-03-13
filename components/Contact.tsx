@@ -10,6 +10,7 @@ type FormData = {
   email: string;
   company?: string;
   message: string;
+  consent: boolean;
 };
 
 export default function Contact() {
@@ -23,16 +24,33 @@ export default function Contact() {
   } = useForm<FormData>();
   
   const onSubmit = async (data: FormData) => {
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log('Form submitted:', data);
-    setIsSubmitted(true);
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Ein Fehler ist aufgetreten');
+      }
+      
+      // Form submitted successfully
+      setIsSubmitted(true);
+      reset();
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Ein Fehler ist aufgetreten. Bitte versuche es später erneut.');
+    }
   };
 
   return (
@@ -158,6 +176,23 @@ export default function Contact() {
                     <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message.message}</p>
                   )}
                 </div>
+                
+                <div className="flex items-start mb-4">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="consent"
+                      type="checkbox"
+                      className={`w-4 h-4 border ${errors.consent ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded bg-white dark:bg-gray-700 focus:ring-2 focus:ring-primary`}
+                      {...register('consent', { required: 'Zustimmung ist erforderlich' })}
+                    />
+                  </div>
+                  <label htmlFor="consent" className="ml-2 text-sm text-gray-600 dark:text-gray-300">
+                    Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. Weitere Informationen finden Sie in unserer <a href="#" className="text-primary hover:underline">Datenschutzerklärung</a>. *
+                  </label>
+                </div>
+                {errors.consent && (
+                  <p className="mt-1 text-sm text-red-600 dark:text-red-400 mb-4">{errors.consent.message}</p>
+                )}
                 
                 <div>
                   <button
