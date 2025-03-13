@@ -61,7 +61,7 @@ export default function Journey() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white font-ultra">
             So begleiten wir Dich auf Deinem KI-Weg
           </h2>
           

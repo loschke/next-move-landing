@@ -17,7 +17,7 @@ export default function Cta() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-6 text-white"
+            className="text-3xl md:text-4xl font-bold mb-6 text-white font-ultra"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

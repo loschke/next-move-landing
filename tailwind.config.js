@@ -15,6 +15,12 @@ module.exports = {
       backgroundImage: {
         'gradient-brand': 'linear-gradient(135deg, var(--queonext), var(--moveelevator))',
       },
+      fontFamily: {
+        sans: ['FF Clan Pro', 'Arial', 'sans-serif'],
+      },
+      fontWeight: {
+        ultra: '900',
+      },
     },
   },
   plugins: [],

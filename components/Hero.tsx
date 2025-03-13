@@ -21,7 +21,7 @@ export default function Hero() {
         >
           
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white"
+            className="text-4xl md:text-5xl lg:text-6xl mb-6 text-gray-800 dark:text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -30,7 +30,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.h2
-            className="text-2xl md:text-3xl font-semibold mb-6 text-primary dark:text-primary"
+            className="text-2xl md:text-3xl mb-6 text-primary dark:text-primary"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}

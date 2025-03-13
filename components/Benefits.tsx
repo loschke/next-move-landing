@@ -42,7 +42,7 @@ export default function Benefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-ultra">
             KI verstehen, einsetzen und produktiv nutzen
           </h2>
           

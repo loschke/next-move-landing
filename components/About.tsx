@@ -38,7 +38,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-white">
+            <h2 className="text-3xl md:text-4xl mb-6 text-gray-800 dark:text-white">
               Why Choose <span className="text-indigo-600 dark:text-indigo-400">NextMove</span>
             </h2>
             
