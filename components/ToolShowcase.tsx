@@ -11,9 +11,9 @@ export default function ToolShowcase() {
       title: "Expert Chat",
       description: "Dialogbasierte KI-Interaktion mit spezialisierten Marketing-Experten-Profilen. Multi-LLM-Strategie für optimale Antworten.",
       benefits: [
-        "Marketing-Expertise on demand",
-        "Strategische Beratung durch KI",
-        "Flexible Problemlösung"
+        "Expertise on demand",
+        "Corporate Wording",
+        "Prompt Management"
       ]
     },
     {
@@ -43,7 +43,7 @@ export default function ToolShowcase() {
       benefits: [
         "SEO-Analyse und Optimierung",
         "Content-Bewertung und Verbesserung",
-        "Performance-Optimierung"
+        "Performance & Accessibility Checks"
       ]
     },
     {
@@ -58,12 +58,12 @@ export default function ToolShowcase() {
     },
     {
       icon: FaTools,
-      title: "Utility Tools",
+      title: "Mini Apps",
       description: "Sammlung technischer Hilfswerkzeuge für Sprache, Datenkonvertierung und Transkription in einer zentralen Toolbox.",
       benefits: [
-        "YouTube Transkription",
-        "Website Scraping",
-        "Daten Operationen"
+        "Transkription & Scraping",
+        "Audio Tools",
+        "Übersetzung"
       ]
     }
   ];
@@ -83,7 +83,7 @@ export default function ToolShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-ultra">
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
            Profitiere von unserer <span className="text-gradient-brand">KI-Toolbox</span>
           </h2>
           
