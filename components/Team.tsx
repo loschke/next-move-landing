@@ -48,7 +48,7 @@ export default function Team() {
   return (
     <>
       {/* Team Intro Section */}
-      <section className="pt-40 pb-20 bg-gray-900 text-white relative overflow-hidden">
+      <section className="pt-20 sm:pt-28 md:pt-40 pb-16 sm:pb-20 bg-gray-900 text-white relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent opacity-50"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-queonext/10 to-moveelevator/10 rounded-tl-full blur-3xl"></div>
@@ -130,7 +130,7 @@ export default function Team() {
           </div>
           
           {/* Three-card layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {expertiseCards.map((card, index) => (
               <motion.div
                 key={index}
@@ -225,7 +225,7 @@ export default function Team() {
             >
               <a 
                 href="#contact" 
-                className="px-8 py-3 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all inline-flex items-center gap-2 shadow-lg group"
+                className="px-6 sm:px-8 py-2 sm:py-3 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all inline-flex items-center gap-2 shadow-lg group text-sm sm:text-base"
               >
                 <span>Jetzt Kontakt aufnehmen</span>
                 <FaChevronRight className="group-hover:translate-x-1 transition-transform" />

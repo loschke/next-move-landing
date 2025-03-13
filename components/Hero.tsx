@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
       
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center text-center">
+      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24 flex flex-col items-center justify-center text-center">
         {/* Text Content */}
         <motion.div 
           className="max-w-3xl z-10"
@@ -21,13 +21,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="mb-8"
+            className="mb-6 sm:mb-8"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl mb-6 font-black"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 font-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,7 +38,7 @@ export default function Hero() {
           </motion.div>
           
           <motion.h2
-            className="text-2xl md:text-3xl mb-8 text-primary font-bold"
+            className="text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 text-primary font-bold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -47,7 +47,7 @@ export default function Hero() {
           </motion.h2>
           
           <motion.p 
-            className="text-lg md:text-xl text-gray-300 mb-10 mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -63,7 +63,7 @@ export default function Hero() {
           >
             <a 
               href="#contact" 
-              className="px-10 py-4 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-3 group shadow-lg shadow-primary/20 hover:shadow-primary/30 text-lg"
+              className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 sm:gap-3 group shadow-lg shadow-primary/20 hover:shadow-primary/30 text-base sm:text-lg"
             >
               Starte deine KI-Reise
               <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

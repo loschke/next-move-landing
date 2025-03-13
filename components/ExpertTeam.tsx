@@ -118,7 +118,7 @@ export default function ExpertTeam() {
   ];
 
   return (
-    <section className="py-40 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 md:py-40 bg-gray-900 text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent opacity-50"></div>
       <div className="absolute -top-20 right-20 w-80 h-80 bg-queonext/5 rounded-full blur-3xl -z-10"></div>
@@ -201,9 +201,9 @@ export default function ExpertTeam() {
           >
             <a 
               href="#contact" 
-              className="inline-flex items-center gap-3 px-10 py-4 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-xl text-lg group"
+              className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-3 sm:py-4 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-xl text-base sm:text-lg group"
             >
-              <span>Jetzt persönliches Gespräch vereinbaren</span>
+              <span>Jetzt Gespräch vereinbaren</span>
               <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

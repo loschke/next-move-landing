@@ -69,7 +69,7 @@ export default function ToolShowcase() {
   ];
 
   return (
-    <section className="py-40 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-20 sm:py-28 md:py-40 bg-gray-900 text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent opacity-50"></div>
       <div className="absolute -top-20 right-20 w-80 h-80 bg-queonext/5 rounded-full blur-3xl -z-10"></div>
@@ -132,7 +132,7 @@ export default function ToolShowcase() {
         </motion.div>
         
         {/* Tool Categories Grid - First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           {toolCategories.slice(0, 3).map((tool, index) => (
             <motion.div 
               key={index}
@@ -166,7 +166,7 @@ export default function ToolShowcase() {
         </div>
         
         {/* Tool Categories Grid - Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {toolCategories.slice(3).map((tool, index) => (
             <motion.div 
               key={index}

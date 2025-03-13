@@ -36,7 +36,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-gray-50 to-transparent dark:from-gray-900 dark:to-transparent -z-10"></div>
       <div className="absolute -top-20 -right-20 w-80 h-80 bg-queonext/5 rounded-full blur-3xl -z-10"></div>
@@ -79,7 +79,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg">
               
               {isSubmitted ? (
                 <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 mb-6">
@@ -163,7 +163,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto px-8 py-3 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
+                    className="w-full md:w-auto px-6 sm:px-8 py-2 sm:py-3 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg text-sm sm:text-base"
                   >
                     {isSubmitting ? 'Wird gesendet...' : (
                       <>

@@ -39,7 +39,7 @@ export default function FeaturesGrid() {
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         {/* Hero Image */}
         <motion.div 
-          className="aspect-w-16 aspect-h-7 mb-28 relative h-[500px]"
+          className="aspect-w-16 aspect-h-7 mb-16 sm:mb-20 md:mb-28 relative h-[300px] sm:h-[400px] md:h-[500px]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -50,7 +50,9 @@ export default function FeaturesGrid() {
             src="/img/zielgruppe-team.webp" 
             alt="Features Hero Image"
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 100vw"
             style={{ objectFit: 'cover' }}
+            priority
           />
         </motion.div>
 

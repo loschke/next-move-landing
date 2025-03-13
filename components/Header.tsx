@@ -22,7 +22,7 @@ export default function Header() {
   
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 py-3 sm:py-4 transition-all duration-300 ${
         scrolled 
           ? 'bg-gray-900/80 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
@@ -30,14 +30,14 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-xl sm:text-2xl font-bold">
           <span className="text-gradient-brand">NEXT MOVE AI</span>
         </Link>
         
         {/* CTA Button */}
         <Link 
           href="#contact" 
-          className="px-6 py-2 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-lg"
+          className="px-4 sm:px-6 py-2 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-lg text-sm sm:text-base"
         >
           Kontakt
         </Link>
