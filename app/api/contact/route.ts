@@ -13,15 +13,51 @@ interface ContactFormData {
 // Simple email validation regex
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-// Create a Nodemailer transporter
+// Log raw credentials for debugging (without exposing full password)
+const emailUser = process.env.EMAIL_USER || '';
+const emailPass = process.env.EMAIL_PASSWORD || '';
+console.log('Credentials check:', {
+  user: emailUser,
+  passLength: emailPass.length,
+  passFirstChar: emailPass.charAt(0),
+  passLastChar: emailPass.charAt(emailPass.length - 1)
+});
+
+// Try to encode the password properly in case special characters are causing issues
+const encodedPass = encodeURIComponent(emailPass);
+console.log('Using encoded password:', {
+  originalLength: emailPass.length,
+  encodedLength: encodedPass.length,
+  isEncoded: emailPass !== encodedPass
+});
+
+// Create a Nodemailer transporter with SMTP configuration
 const transporter = nodemailer.createTransport({
+  // SMTP configuration
   host: process.env.EMAIL_HOST,
-  port: Number(process.env.EMAIL_PORT) || 587,
-  secure: Number(process.env.EMAIL_PORT) === 465, // true for 465, false for other ports
+  port: Number(process.env.EMAIL_PORT) || 465,
+  secure: process.env.SMTP_SECURE === 'true', // Use secure for port 465
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
+    type: 'login', // Explicitly use LOGIN method instead of PLAIN
+    user: emailUser,
+    pass: encodedPass, // Use encoded password
   },
+  // TLS configuration for better compatibility
+  tls: {
+    rejectUnauthorized: false, // Don't fail on invalid certs
+  },
+  debug: true, // Enable debug output
+  logger: true, // Enable even more detailed logging
+} as nodemailer.TransportOptions);
+
+// Log transporter configuration (without password)
+console.log('Email configuration:', {
+  host: process.env.EMAIL_HOST,
+  port: Number(process.env.EMAIL_PORT) || 465,
+  secure: process.env.SMTP_SECURE === 'true',
+  user: process.env.EMAIL_USER,
+  from: process.env.EMAIL_FROM,
+  recipients: [process.env.EMAIL_RECIPIENT1, process.env.EMAIL_RECIPIENT2].filter(Boolean)
 });
 
 export async function POST(request: NextRequest) {
