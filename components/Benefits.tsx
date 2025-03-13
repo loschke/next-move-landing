@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaRocket, FaBolt, FaUserFriends, FaLightbulb, FaChartLine } from 'react-icons/fa';
+import { FaRocket, FaUserFriends, FaLightbulb, FaChartLine } from 'react-icons/fa';
 
 export default function Benefits() {
   const benefits = [

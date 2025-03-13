@@ -43,7 +43,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              With years of experience in the industry, we've helped countless businesses transform their operations and achieve sustainable growth. Our approach combines strategic consulting with cutting-edge technology to deliver solutions that make a real difference.
+              With years of experience in the industry, we&apos;ve helped countless businesses transform their operations and achieve sustainable growth. Our approach combines strategic consulting with cutting-edge technology to deliver solutions that make a real difference.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
