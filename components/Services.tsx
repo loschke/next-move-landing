@@ -91,15 +91,6 @@ export default function Services() {
       
       <div className="container relative mx-auto px-4 z-10">
         <div className="text-center mb-16">
-          <motion.div
-            className="inline-block mb-4 px-4 py-1 rounded-full bg-primary/10 backdrop-blur-sm"
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
-          >
-            <p className="text-primary font-medium">Unsere Expertise für Dich</p>
-          </motion.div>
           
           <motion.h2 
             className="text-3xl md:text-4xl mb-4 text-gray-800 dark:text-white"
@@ -108,7 +99,7 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Unsere Leistungen
+            Unsere KI-Expertise auf einen Blick
           </motion.h2>
           
           <motion.div 

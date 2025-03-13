@@ -48,7 +48,7 @@ export default function Team() {
   return (
     <>
       {/* Team Intro Section */}
-      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+      <section className="pt-40 pb-20 bg-gray-900 text-white relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent opacity-50"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-queonext/10 to-moveelevator/10 rounded-tl-full blur-3xl"></div>
@@ -61,7 +61,7 @@ export default function Team() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-ultra">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
               Die Köpfe hinter NEXT MOVE AI
             </h2>
             
@@ -113,7 +113,7 @@ export default function Team() {
             </motion.div>
             
             <motion.div
-              className="relative w-52 h-18"
+              className="relative w-48 h-18"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -153,7 +153,7 @@ export default function Team() {
       </section>
       
       {/* Highlights Section */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+      <section className="py-20 bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-900 to-transparent opacity-30"></div>
         <div className="absolute -top-20 right-20 w-80 h-80 bg-queonext/5 rounded-full blur-3xl -z-10"></div>

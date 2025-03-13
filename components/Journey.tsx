@@ -18,7 +18,7 @@ export default function Journey() {
     {
       icon: FaToolbox,
       title: "KI-Toolbox & Flat-Rate-Angebot",
-      description: "Technologie muss anwendbar sein – deshalb bekommst Du Zugriff auf eine kuratierte Auswahl an KI-Tools, die direkt in Deinen Arbeitsalltag integriert werden können. Unsere Flat-Rate ermöglicht eine flexible Nutzung für Dein gesamtes Team – ohne komplizierte Lizenzmodelle."
+      description: "Technologie muss anwendbar sein – deshalb bekommst Du Zugriff auf unsere erprobte Auswahl an KI-Tools, die direkt in Deinen Arbeitsalltag integriert werden können. Unsere Fair-Flat-Rate ermöglicht  flexible Nutzung für Dein ganzes Team – ohne komplizierte Lizenzmodelle."
     },
     {
       icon: FaRocket,
@@ -95,8 +95,10 @@ export default function Journey() {
               {/* Decorative corner */}
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-queonext to-moveelevator opacity-10 rounded-bl-full"></div>
               
-              {/* Pin icon */}
-              <div className="text-primary text-lg font-bold mb-4">📌</div>
+              {/* Step icon */}
+              <div className="text-primary text-2xl mb-4">
+                <step.icon />
+              </div>
               
               <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">{step.title}</h3>
               

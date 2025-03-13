@@ -69,7 +69,7 @@ export default function ToolShowcase() {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-40 bg-gray-900 text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent opacity-50"></div>
       <div className="absolute -top-20 right-20 w-80 h-80 bg-queonext/5 rounded-full blur-3xl -z-10"></div>
@@ -84,26 +84,51 @@ export default function ToolShowcase() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-ultra">
-            Alle KI-Tools zentral orchestriert
+           Profitiere von unserer <span className="text-gradient-brand">KI-Toolbox</span>
           </h2>
           
           <motion.div 
-            className="w-20 h-1 bg-primary mx-auto mb-6"
+            className="w-24 h-1 bg-primary mx-auto mb-6"
             initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
+            whileInView={{ width: 96 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           ></motion.div>
           
           <motion.p 
-            className="text-lg text-gray-300 max-w-4xl mx-auto"
+            className="text-lg text-gray-300 max-w-4xl mx-auto mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Von ChatGPT und Claude für Texte bis zu Midjourney für Bilder - die besten KI-Provider in einer Suite, plus umfassende Beratung für Ihre erfolgreiche KI-Transformation
+            Im Rahmen Deiner KI-Transformation erhältst Du Zugang zu einer sorgfältig kuratierten Auswahl erprobter Marketing-Werkzeuge – mit vereinfachten Lizenzmodellen und ohne technische Hürden. Alle Tools sind sofort einsatzbereit und ermöglichen  einen unkomplizierten Einstieg in die KI.
           </motion.p>
+          
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 mb-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="bg-gray-800/50 px-4 py-2 rounded-full border border-gray-700 flex items-center gap-2">
+              <FaCheck className="text-primary" />
+              <span>Vereinfachte Lizenzmodelle</span>
+            </div>
+            <div className="bg-gray-800/50 px-4 py-2 rounded-full border border-gray-700 flex items-center gap-2">
+              <FaCheck className="text-primary" />
+              <span>Sofort einsatzbereit</span>
+            </div>
+            <div className="bg-gray-800/50 px-4 py-2 rounded-full border border-gray-700 flex items-center gap-2">
+              <FaCheck className="text-primary" />
+              <span>Erprobte Marketing-Tools</span>
+            </div>
+            <div className="bg-gray-800/50 px-4 py-2 rounded-full border border-gray-700 flex items-center gap-2">
+              <FaCheck className="text-primary" />
+              <span>Zentrale Orchestrierung</span>
+            </div>
+          </motion.div>
         </motion.div>
         
         {/* Tool Categories Grid - First Row */}
