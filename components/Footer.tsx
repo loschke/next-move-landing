@@ -1,7 +1,14 @@
-import Link from 'next/link';
+"use client";
+
+import { useState } from 'react';
+import Modal from './Modal';
+import Impressum from './Impressum';
+import Datenschutz from './Datenschutz';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [impressumOpen, setImpressumOpen] = useState(false);
+  const [datenschutzOpen, setDatenschutzOpen] = useState(false);
   
   return (
     <footer className="bg-gray-900 text-white py-12 relative overflow-hidden">
@@ -27,12 +34,18 @@ export default function Footer() {
             <a href="https://move-elevator.de" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
               move-elevator.de
             </a>
-            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <button 
+              onClick={() => setImpressumOpen(true)} 
+              className="text-gray-400 hover:text-primary transition-colors bg-transparent border-none p-0 cursor-pointer"
+            >
               Impressum
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => setDatenschutzOpen(true)} 
+              className="text-gray-400 hover:text-primary transition-colors bg-transparent border-none p-0 cursor-pointer"
+            >
               Datenschutz
-            </Link>
+            </button>
           </div>
         </div>
         
@@ -40,6 +53,23 @@ export default function Footer() {
           <p>&copy; {currentYear} NEXT MOVE AI. Alle Rechte vorbehalten.</p>
         </div>
       </div>
+
+      {/* Modals */}
+      <Modal 
+        isOpen={impressumOpen} 
+        onClose={() => setImpressumOpen(false)} 
+        title="Impressum"
+      >
+        <Impressum />
+      </Modal>
+
+      <Modal 
+        isOpen={datenschutzOpen} 
+        onClose={() => setDatenschutzOpen(false)} 
+        title="Datenschutzerklärung"
+      >
+        <Datenschutz />
+      </Modal>
     </footer>
   );
 }
