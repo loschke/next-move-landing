@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import JsonLd from "../components/JsonLd";
-import { ThemeProvider } from "../components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "NextMove AI | Dein leichter Einstieg in die KI-Transformation",
@@ -63,9 +62,7 @@ export default function RootLayout({
     <html lang="de">
       <body className="antialiased" suppressHydrationWarning>
         <JsonLd />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
