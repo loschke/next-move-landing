@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa';
+import Modal from './Modal';
+import Datenschutz from './Datenschutz';
 
 type FormData = {
   name: string;
@@ -15,6 +17,7 @@ type FormData = {
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [datenschutzOpen, setDatenschutzOpen] = useState(false);
   
   const { 
     register, 
@@ -187,7 +190,7 @@ export default function Contact() {
                     />
                   </div>
                   <label htmlFor="consent" className="ml-2 text-sm text-gray-600 dark:text-gray-300">
-                    Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. Weitere Informationen finden Sie in unserer <a href="#" className="text-primary hover:underline">Datenschutzerklärung</a>. *
+                    Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. Weitere Informationen finden Sie in unserer <button type="button" onClick={() => setDatenschutzOpen(true)} className="text-primary hover:underline bg-transparent border-none p-0 cursor-pointer">Datenschutzerklärung</button>. *
                   </label>
                 </div>
                 {errors.consent && (
@@ -213,6 +216,15 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+
+      {/* Datenschutz Modal */}
+      <Modal 
+        isOpen={datenschutzOpen} 
+        onClose={() => setDatenschutzOpen(false)} 
+        title="Datenschutzerklärung"
+      >
+        <Datenschutz />
+      </Modal>
     </section>
   );
 }
