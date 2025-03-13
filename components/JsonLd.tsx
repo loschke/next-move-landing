@@ -27,7 +27,7 @@ export default function JsonLd() {
     '@type': 'WebSite',
     name: 'NextMove AI',
     url: 'https://next-move.ai',
-    description: 'Wir begleiten Unternehmen am Anfang ihrer KI-Reise mit erprobten Prozessen und praxisnahen Lösungen.',
+    description: 'Starte deine KI-Reise mit NextMove AI! Wir machen KI zugänglich und liefern praxisnahe Lösungen für dein Unternehmen. Entdecke jetzt die Möglichkeiten!',
     inLanguage: 'de-DE'
   };
 
@@ -40,7 +40,7 @@ export default function JsonLd() {
       '@type': 'Organization',
       name: 'NextMove AI'
     },
-    description: 'Wir begleiten Unternehmen am Anfang ihrer KI-Reise mit erprobten Prozessen und praxisnahen Lösungen.',
+    description: 'Starte deine KI-Reise mit NextMove AI! Wir machen KI zugänglich und liefern praxisnahe Lösungen für dein Unternehmen.',
     areaServed: 'DE',
     audience: {
       '@type': 'BusinessAudience',

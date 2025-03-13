@@ -1,0 +1,17 @@
+FAVICON FILES TO CREATE:
+
+Please create the following favicon files and place them in the appropriate locations:
+
+1. app/favicon.ico - Standard favicon (already exists)
+2. public/favicon.svg - Vector version of your favicon
+3. public/favicon-16x16.png - 16x16 pixel PNG version
+4. public/favicon-32x32.png - 32x32 pixel PNG version
+5. public/apple-touch-icon.png - 180x180 pixel PNG for Apple devices
+6. public/android-chrome-192x192.png - 192x192 pixel PNG for Android
+7. public/android-chrome-512x512.png - 512x512 pixel PNG for Android
+
+You can use tools like RealFaviconGenerator (https://realfavicongenerator.net/) 
+or Favicon.io (https://favicon.io/) to generate all these files from a single image.
+
+The manifest.json file has already been created in the public directory, and 
+the app/layout.tsx file has been updated to include references to all these favicon files.

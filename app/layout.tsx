@@ -3,8 +3,24 @@ import "./globals.css";
 import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "NextMove AI | Dein leichter Einstieg in die KI-Transformation",
-  description: "Wir begleiten Unternehmen am Anfang ihrer KI-Reise mit erprobten Prozessen und praxisnahen Lösungen. Starte jetzt deine KI-Transformation!",
+  title: "NextMove AI: Dein leichter Einstieg in die KI-Welt",
+  description: "Starte deine KI-Reise mit NextMove AI! Wir machen KI zugänglich und liefern praxisnahe Lösungen für dein Unternehmen. Entdecke jetzt die Möglichkeiten!",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
+  manifest: '/manifest.json',
   keywords: "KI-Transformation, KI-Beratung, Künstliche Intelligenz, KI-Einstieg, KI-Strategie, KI-Implementierung",
   authors: [
     { name: "NextMove AI Team" }
@@ -20,8 +36,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "NextMove AI | Dein leichter Einstieg in die KI-Transformation",
-    description: "Wir begleiten Unternehmen am Anfang ihrer KI-Reise mit erprobten Prozessen und praxisnahen Lösungen.",
+    title: "NextMove AI: Dein leichter Einstieg in die KI-Welt",
+    description: "Starte deine KI-Reise mit NextMove AI! Wir machen KI zugänglich und liefern praxisnahe Lösungen für dein Unternehmen. Entdecke jetzt die Möglichkeiten!",
     url: "https://next-move.ai",
     siteName: "NextMove AI",
     locale: "de_DE",
@@ -37,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NextMove AI | Dein leichter Einstieg in die KI-Transformation",
-    description: "Wir begleiten Unternehmen am Anfang ihrer KI-Reise mit erprobten Prozessen und praxisnahen Lösungen.",
+    title: "NextMove AI: Dein leichter Einstieg in die KI-Welt",
+    description: "Starte deine KI-Reise mit NextMove AI! Wir machen KI zugänglich und liefern praxisnahe Lösungen für dein Unternehmen. Entdecke jetzt die Möglichkeiten!",
     images: ["https://next-move.ai/img/office.webp"],
   },
   robots: {
