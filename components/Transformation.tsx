@@ -92,7 +92,7 @@ export default function Transformation() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Mit NEXT MOVE AI wird Ihre KI-Transformation zum Erfolg. Wir sorgen dafür, dass der Einstieg in die KI-Welt reibungslos und effizient verläuft.
+            Mit next:move.ai wird Ihre KI-Transformation zum Erfolg. Wir sorgen dafür, dass der Einstieg in die KI-Welt reibungslos und effizient verläuft.
           </motion.p>
         </motion.div>
         

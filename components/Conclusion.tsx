@@ -77,7 +77,7 @@ export default function Conclusion() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Mit NEXT MOVE AI erhältst Du einen unkomplizierten Einstieg in die KI-Welt – mit sofortigen Ergebnissen, die Dein Unternehmen voranbringen.
+            Mit <span className='text-white'>next:move.ai</span> erhältst Du einen unkomplizierten Einstieg in die KI-Welt – mit sofortigen Ergebnissen, die Dein Unternehmen voranbringen.
           </motion.p>
         </motion.div>
         

@@ -30,8 +30,8 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-xl sm:text-2xl font-bold">
-          <span className="text-gradient-brand">NEXT MOVE AI</span>
+        <Link href="/" className="text-xl sm:text-2xl">
+          <span className="text-white">next</span><span className="text-primary  font-bold">:</span><span className="text-white">move.ai</span>
         </Link>
         
         {/* CTA Button */}
@@ -39,7 +39,7 @@ export default function Header() {
           href="#contact" 
           className="px-4 sm:px-6 py-2 gradient-brand hover:opacity-90 text-white font-medium rounded-lg transition-all shadow-lg text-sm sm:text-base"
         >
-          Kontakt
+          Gespräch vereinbaren
         </Link>
       </div>
     </header>

@@ -62,7 +62,7 @@ export default function Team() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Die Köpfe hinter NEXT MOVE AI
+              Die Köpfe hinter <span className='font-normal not-italic mb-6 sm:mb-8'>next<span className="text-primary font-bold">:</span>move.ai</span>
             </h2>
             
             <motion.div 
@@ -80,7 +80,7 @@ export default function Team() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              NEXT MOVE AI ist ein Zusammenschluss zweier führender Digitalagenturen.
+              <span className='text-white'>next:move.ai</span> ist ein Zusammenschluss zweier führender Digitalagenturen.
             </motion.p>
           </motion.div>
           

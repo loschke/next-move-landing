@@ -27,13 +27,13 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 font-black"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className="text-gradient-brand block mb-2">NEXT MOVE AI</span>
-              <span className="leading-tight">Dein leichter Einstieg in die KI-Transformation</span>
+              <span className='block font-normal not-italic mb-6 sm:mb-8'>next<span className="text-primary font-bold">:</span>move.ai</span>
+              <span className="leading-tight font-black">Dein leichter Einstieg in die KI-Transformation</span>
             </motion.h1>
           </motion.div>
           

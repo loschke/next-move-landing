@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="max-w-4xl mx-auto">
           {/* Company Info */}
           <div className="text-center mb-8">
-            <h3 className="text-xl font-bold mb-4 text-gradient-brand">NEXT MOVE AI</h3>
+            <h3 className="text-2xl mb-4"><span className="text-white">next</span><span className="text-primary  font-bold">:</span><span className="text-white">move.ai</span></h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Wir begleiten Unternehmen auf ihrem Weg in die KI-Transformation mit praxisnahen Lösungen und erprobten Methoden.
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} NEXT MOVE AI. Alle Rechte vorbehalten.</p>
+          <p>&copy; {currentYear} next:move.ai. Alle Rechte vorbehalten.</p>
         </div>
       </div>
 

@@ -78,7 +78,7 @@ export default function FeaturesGrid() {
             ></motion.div>
             
             <p className="text-xl text-gray-300 leading-relaxed max-w-xl">
-              Mit NEXT MOVE AI erhältst Du einen strukturierten Weg in die KI-Transformation – ohne Fachjargon, aber mit konkreten Ergebnissen von Tag eins an.
+              Mit <span className='text-white'>next:move.ai</span> erhältst Du einen strukturierten Weg in die KI-Transformation – ohne Fachjargon, aber mit konkreten Ergebnissen von Tag eins an.
             </p>
           </motion.div>
 
