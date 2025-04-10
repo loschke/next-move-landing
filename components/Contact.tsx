@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa';
 import Modal from './Modal';
 import Datenschutz from './Datenschutz';
+import { getReferralSource } from '../app/utils/referral';
 
 type FormData = {
   name: string;
@@ -13,11 +14,18 @@ type FormData = {
   company?: string;
   message: string;
   consent: boolean;
+  referralSource?: string;
 };
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [datenschutzOpen, setDatenschutzOpen] = useState(false);
+  const [referralSource, setReferralSource] = useState<string | null>(null);
+  
+  // Get referral source from cookie when component mounts
+  useEffect(() => {
+    setReferralSource(getReferralSource());
+  }, []);
   
   const { 
     register, 
@@ -28,12 +36,18 @@ export default function Contact() {
   
   const onSubmit = async (data: FormData) => {
     try {
+      // Include referral source in form submission if available
+      const formData = {
+        ...data,
+        referralSource
+      };
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
       
       const result = await response.json();

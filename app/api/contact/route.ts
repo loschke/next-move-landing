@@ -8,6 +8,7 @@ interface ContactFormData {
   company?: string;
   message: string;
   consent: boolean;
+  referralSource?: string | null;
 }
 
 // Simple email validation regex
@@ -114,17 +115,43 @@ export async function POST(request: NextRequest) {
     `;
 
     try {
-      // Send email to both recipients
+      // Determine recipients based on referral source
+      let recipients: string[] = [];
+      
+      if (data.referralSource === 'next') {
+        // Only send to queonext (RECIPIENT1)
+        if (process.env.EMAIL_RECIPIENT1) {
+          recipients.push(process.env.EMAIL_RECIPIENT1);
+        }
+        console.log('Sending email only to queonext based on referral source');
+      } else if (data.referralSource === 'move') {
+        // Only send to move-elevator (RECIPIENT2)
+        if (process.env.EMAIL_RECIPIENT2) {
+          recipients.push(process.env.EMAIL_RECIPIENT2);
+        }
+        console.log('Sending email only to move-elevator based on referral source');
+      } else {
+        // No referral source or invalid source, send to both (default behavior)
+        if (process.env.EMAIL_RECIPIENT1) {
+          recipients.push(process.env.EMAIL_RECIPIENT1);
+        }
+        if (process.env.EMAIL_RECIPIENT2) {
+          recipients.push(process.env.EMAIL_RECIPIENT2);
+        }
+        console.log('Sending email to both recipients (no valid referral source)');
+      }
+      
+      // Send email to determined recipients
       await transporter.sendMail({
         from: process.env.EMAIL_FROM,
-        to: [process.env.EMAIL_RECIPIENT1, process.env.EMAIL_RECIPIENT2].filter(Boolean).join(', '),
+        to: recipients.join(', '),
         replyTo: data.email,
         subject: emailSubject,
         text: emailText,
         html: emailHtml,
       });
 
-      console.log('Email sent successfully to recipients');
+      console.log(`Email sent successfully to recipients: ${recipients.join(', ')}`);
       
       // Return success response
       return NextResponse.json({ 
