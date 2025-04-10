@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
 
     try {
       // Determine recipients based on referral source
-      let recipients: string[] = [];
+      const recipients: string[] = [];
       
       if (data.referralSource === 'next') {
         // Only send to queonext (RECIPIENT1)

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import "./globals.css";
 import JsonLd from "../components/JsonLd";
 import ReferralTracker from "../components/ReferralTracker";
@@ -85,7 +86,9 @@ export default function RootLayout({
           data-website-id="d9446da1-3244-4764-9250-f6e7c92db1e5"
         />
         <JsonLd />
-        <ReferralTracker />
+        <Suspense fallback={null}>
+          <ReferralTracker />
+        </Suspense>
         {children}
       </body>
     </html>
